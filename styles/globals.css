@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        font-family: roc-grotesk, sans-serif; 
+        font-size: 16px;
+        padding:0;
+        margin: .5em .5em;
+    }
+    h1,h2,h3{
+        @apply font-Roc-wide text-2xl sm:text-3xl md:text-4xl;
+    }
+ 
+  }
+

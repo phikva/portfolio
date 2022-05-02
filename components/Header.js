@@ -3,13 +3,13 @@ import Link from "next/link";
 export default function Header() {
   return (
     <>
-      <header className="flex justify-between">
+      <header className="inline-block">
 
           <div>
               <h1><Link href="/">Philip Charoen Kvam</Link></h1>
           </div>
 
-        <nav>
+        {/* <nav>
           <ul className="text-right sm:grid grid-cols-2">
             <li>
               <Link href="/">projects</Link>
@@ -18,7 +18,7 @@ export default function Header() {
               <Link href="/about">about</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
       </header>
     </>
   );

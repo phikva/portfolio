@@ -5,8 +5,8 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'black': '#0000',
-      'white': '#ffff',
+      'black': '#000',
+      'white': '#fff',
     },
     screens: {
       xs: '370px',
@@ -19,6 +19,9 @@ module.exports = {
       fontFamily: {
         'Roc': ['roc-grotesk', 'sans-serif'],
         'Roc-wide': ['roc-grotesk-wide', 'sans-serif']  
+      },
+      gridAutoColumns: {
+        '2fr': 'minmax(0, 2fr)',
       },
     },
   },

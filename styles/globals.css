@@ -3,20 +3,37 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        font-family: roc-grotesk, sans-serif; 
-        font-size: 16px;
-        padding:0;
-        margin: 1em 1em;
-        background-color: theme('colors.black');
-        color: theme('colors.white');
-    }
-    h1,h2{
-        @apply font-Roc-wide text-2xl sm:text-3xl;
-    }
-    h3,h4{
-        @apply font-Roc-wide xs:text-lg sm:text-2xl;
-    }
- 
+  body {
+    min-width: 360px;
+    max-width: 2500px;
+    font-family: roc-grotesk, sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin: 0 auto;
+    background-color: theme("colors.black");
+    color: theme("colors.white");
+  }
+  h1 {
+    @apply font-Roc-wide text-5xl leading-10  md:text-7xl;
   }
 
+  h2 {
+    @apply font-Roc-wide text-2xl sm:text-3xl;
+  }
+  h3 {
+    @apply font-Roc-wide xs:text-lg sm:text-2xl;
+  }
+
+  h4 {
+    @apply font-Roc-wide xs:text-lg sm:text-xl;
+  }
+
+  #__next {
+    margin: 1em 1em;
+  }
+}
+@layer components {
+    .hero {
+        height: 100vh;
+    }
+}

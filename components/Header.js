@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 export default function Header() {
@@ -6,7 +7,7 @@ export default function Header() {
       <header className="inline-block">
 
           <div>
-              <h1><Link href="/">Philip Charoen Kvam</Link></h1>
+              <h2><Link href="/">Philip Charoen Kvam</Link></h2>
           </div>
 
         {/* <nav>

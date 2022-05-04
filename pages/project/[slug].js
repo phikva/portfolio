@@ -1,7 +1,8 @@
 import { GraphQLClient, gql } from "graphql-request";
 import Link from "next/link";
 import Image from "next/image";
-
+import ReactPlayer from "react-player";
+import { AnimatePresence, motion } from "framer-motion";
 const graphcms = new GraphQLClient(
   "https://api-eu-west-2.graphcms.com/v2/cl2j8qyb40er901z9fubd5876/master"
 );
@@ -53,44 +54,133 @@ export async function getStaticPaths() {
   };
 }
 
+const container = {
+  show: {
+    transition: {
+      staggerChildren: 0.35,
+    },
+  },
+};
+const item = {
+  hidden: {
+    opacity: 0,
+    y: 200,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -400,
+    transition: {
+      ease: "easeInOut",
+      duration: 0.8,
+    },
+  },
+};
+
+const image = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -400,
+    transition: {
+      ease: "easeInOut",
+      duration: 0.8,
+    },
+  },
+};
+
+
 export default function Project({ project }) {
   console.log(project);
+
   return (
     <>
+      <motion.div variants={container}
+    >
+       <motion.div
+            initial="hidden"
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 0.6,
+                ease: [0.6, 0.01, -0.05, 0.95],
+                duration: 1.2,
+              },
+            }}
+            variants={item}
+          >
       <div className="grid gap-2 xs:grid-cols-1 md:grid-cols-2 mt-10">
-        <h2 className="xs:col-start-1">{project.title}</h2>
-        <h3 className="xs:col-start-1 md:col-start-2">{project.description}</h3>
-        <div className="xs:col-start-1 md:col-start-2 mt-5 mb-20">
-          <div> {project.year}</div>
-          <div>
-            {" "}
-            <a
-              className="xs:text-lg sm:text-2xl"
+     
+        <h4 className="opacity-70 text-right md:text-2xl md:text-left lg:pl-96 ">Project information</h4>
+        <div> {project.year}</div>
+        <h2 className="xs:col-start-1 md:col-start-2">{project.title}</h2>
+        <h3 className="mb-10 xs:col-start-1 md:col-start-2">{project.description}</h3>
+        <h4 className="opacity-70 text-right md:text-2xl md:text-left lg:pl-96  ">Deliveries </h4>
+        {/* <div className="xs:col-start-1 md:col-start-2 mb-20"> */}
+            <a 
+              className="xs:col-start-1 md:col-start-2 xs:text-lg sm:text-2xl"
               href="https://www.matkreator.no"
               target="_blank"
               rel="_norefferer noreferrer"
             >
               {project.demoUrl}
             </a>
-          </div>
-          <h4 className="opacity-70">{project.projectType}</h4>
-        </div>
-
-      </div>
-      <div className="xs:flex flex-col lg:grid grid-cols-2" >
+     
+       
+          <h4 className="mb-10 opacity-70 xs:col-start-1 md:col-start-2">{project.projectType}</h4>
+    
         
-      {project.projectFiles.map(({ id, url }) => (
-         <div key={id}>
+      </div>
+      </motion.div>
+      <div className="xs:grid grid gap-x-2 gap-y-0 flex-col lg:grid-cols-1">
+        {project.projectFiles.map(({ id, url }) => (
+          <div key={id}>
+             <motion.div
+            initial="hidden"
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 0.8,
+                ease: [0.6, 0.01, -0.05, 0.95],
+                duration: 1.2,
+              },
+            }}
+            variants={image}
+          >
             <Image
-                  src={url}
-                  alt="project photo and files"
-                  height={1000}
-                  width={2000}
-                  objectFit="cover"
-                />
-        </div>
+              src={url}
+              alt="project photo and files"
+              height={1500}
+              width={2500}
+              objectFit="cover"
+              quality={100}
+              blurDataURL={url}
+            />
+            </motion.div>
+          </div>
         ))}
       </div>
+      </motion.div>
     </>
   );
 }

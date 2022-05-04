@@ -4,9 +4,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    
     colors: {
       'black': '#000',
       'white': '#fff',
+      "orange": "#ff512a"
     },
     screens: {
       xs: '370px',
@@ -20,9 +22,10 @@ module.exports = {
         'Roc': ['roc-grotesk', 'sans-serif'],
         'Roc-wide': ['roc-grotesk-wide', 'sans-serif']  
       },
-      gridAutoColumns: {
-        '2fr': 'minmax(0, 2fr)',
-      },
+   fontSize: {
+     "5xl" : "2.5rem"
+   }
+     
     },
   },
   plugins: [],

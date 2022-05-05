@@ -81,7 +81,10 @@ export default function Home({ projects, clients, educations }) {
         </title>
         <meta name="description" content="Front end developer and UI designer based in
           Oslo. With a passion for creative and digital work" />
-          
+                <meta name="keywords" content="Front end development, UI design, projects, clients ,education" />
+                <meta property="og:description" content="Front end developer and UI designer based in
+          Oslo. With a passion for creative and digital work" />
+      <meta property="image" content="" />
         <meta property="og:title" content="Philip kvam - front end developer - UI designer" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />

@@ -155,7 +155,7 @@ export default function Home({ projects, clients, educations }) {
               opacity: 1,
               y: 0,
               transition: {
-                delay: 0.6,
+                delay: 0.2,
                 ease: [0.6, 0.01, -0.05, 0.95],
                 duration: 1.2,
               },
@@ -172,7 +172,7 @@ export default function Home({ projects, clients, educations }) {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    delay: 0.6,
+                    delay: 0.2,
                     ease: [0.6, 0.01, -0.05, 0.95],
                     duration: 1.2,
                   },
@@ -209,7 +209,7 @@ export default function Home({ projects, clients, educations }) {
               opacity: 1,
               y: 0,
               transition: {
-                delay: 0.6,
+                delay: 0.2,
                 ease: [0.6, 0.01, -0.05, 0.95],
                 duration: 1.2,
               },
@@ -226,7 +226,7 @@ export default function Home({ projects, clients, educations }) {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    delay: 0.6,
+                    delay: 0.2,
                     ease: [0.6, 0.01, -0.05, 0.95],
                     duration: 1.2,
                   },
@@ -249,7 +249,7 @@ export default function Home({ projects, clients, educations }) {
               opacity: 1,
               y: 0,
               transition: {
-                delay: 0.6,
+                delay: 0.2,
                 ease: [0.6, 0.01, -0.05, 0.95],
                 duration: 1.2,
               },
@@ -266,7 +266,7 @@ export default function Home({ projects, clients, educations }) {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    delay: 0.6,
+                    delay: 0.2,
                     ease: [0.6, 0.01, -0.05, 0.95],
                     duration: 1.2,
                   },

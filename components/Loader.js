@@ -12,11 +12,11 @@ const container = {
 const item = {
   hidden: {
     opacity: 0,
-    y: 100,
+    y: 150,
   },
   show: {
     opacity: 1,
-    y: 50,
+    y: 80,
     transition: {
       delay: 0.6,
       ease: [0.6, 0.01, -0.05, 0.95],
@@ -39,7 +39,7 @@ const item2 = {
   },
   show: {
     opacity: 1,
-    y: 100,
+    y: 120,
     transition: {
       delay: 1,
       ease: [0.6, 0.01, -0.05, 0.95],
@@ -59,11 +59,11 @@ const item2 = {
 const item3 = {
   hidden: {
     opacity: 0,
-    y: 200,
+    y: 250,
   },
   show: {
     opacity: 1,
-    y: 150,
+    y: 170,
     transition: {
       delay: 1.5,
       ease: [0.6, 0.01, -0.05, 0.95],
@@ -83,12 +83,12 @@ const item4 = {
     hidden: {
       opacity: 0,
       y: 200,
-      y:50,
+     
     },
     show: {
       opacity: 1,
       x: 0,
-      y: 200,
+      y: 190,
       transition: {
         delay: 2,
         ease: [0.6, 0.01, -0.05, 0.95],

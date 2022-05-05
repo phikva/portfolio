@@ -126,6 +126,7 @@ export default function Project({ project }) {
         <meta name="robots" content="index,follow" />
         <meta property="og:description" content="Philip Charoen Kvam. Front end developer and UI designer based in
           Oslo. With a passion for creative and digital work." />
+           <meta property="og:title" content="Philip Charoen Kvam" />
           <meta property="og:url" content="https://philipkvam.no" />
           <meta property="og:type" content="website" />
           <meta name="keywords" content={ `${project.description} `} />

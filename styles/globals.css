@@ -37,15 +37,15 @@
         height: 100vh;
     }
     .loader {
-       
+       @apply m-0 p-0
 
     }
     .loader-inner {
-      @apply flex flex-wrap
+      @apply flex flex-wrap justify-around items-center
 
     }
     .loader-inner span {
-        @apply xs:text-8xl md:text-9xl xl:text-10xl;
+        @apply leading-3 xs:text-8xl md:text-9xl xl:text-10xl;
      
      
    

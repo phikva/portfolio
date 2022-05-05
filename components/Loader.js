@@ -82,11 +82,13 @@ const item3 = {
 const item4 = {
     hidden: {
       opacity: 0,
-      y: 100,
+      x: 500,
+      y:50,
     },
     show: {
       opacity: 1,
-      y: 650,
+      x: 0,
+      y: 400,
       transition: {
         delay: 2,
         ease: [0.6, 0.01, -0.05, 0.95],
@@ -95,7 +97,7 @@ const item4 = {
     },
     exit: {
       opacity: 0,
-      y: -500,
+      x: -500,
       transition: {
         ease: "easeInOut",
         duration: 1,

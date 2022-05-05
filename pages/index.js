@@ -93,7 +93,7 @@ export default function Home({ projects, clients, educations }) {
         <meta property="og:description" content="Philip Charoen Kvam. Front end developer and UI designer based in
           Oslo. With a passion for creative and digital work." />
           <meta property="og:title" content="Philip Charoen Kvam" />
-          <meta property="og:url" content="https://philipkvam.no" />
+          <meta property="og:url" content="https://www.philipkvam.no" />
           <meta property="og:type" content="website" />
       </Head>
 

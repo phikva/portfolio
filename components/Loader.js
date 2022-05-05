@@ -82,7 +82,7 @@ const item3 = {
 const item4 = {
     hidden: {
       opacity: 0,
-      x: 250,
+      y: 200,
       y:50,
     },
     show: {
@@ -97,7 +97,7 @@ const item4 = {
     },
     exit: {
       opacity: 0,
-      x: -500,
+      y: -500,
       transition: {
         ease: "easeInOut",
         duration: 1,
@@ -114,7 +114,7 @@ const Loader = ({ setLoading }) => {
         initial="hidden"
         animate="show"
         exit="exit"
-        className="loader-inner"
+        className="loader-inner "
         
       >
   <Player
@@ -140,7 +140,7 @@ const Loader = ({ setLoading }) => {
             delay: 1.8,
           }}
         >
-          <span>Philip</span>
+          <span >Philip</span>
         </motion.div>
         <motion.div
           variants={item2}
@@ -152,7 +152,7 @@ const Loader = ({ setLoading }) => {
             delay: 1.8,
           }}
         >
-          <span>Charoen</span>
+          <span  >Charoen</span>
         </motion.div>
         <motion.div
           variants={item3}
@@ -165,7 +165,7 @@ const Loader = ({ setLoading }) => {
           }}
         >
         
-            <span>Kvam</span>
+            <span >Kvam</span>
         
         </motion.div>
         <motion.div

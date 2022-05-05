@@ -41,7 +41,7 @@
 
     }
     .loader-inner {
-      @apply xs:flex flex-wrap justify-around items-center md:block
+      @apply xs:flex flex-wrap justify-around items-center md:grid grid-cols-1
 
     }
     .loader-inner span {

@@ -138,7 +138,7 @@ export default function Project({ project }) {
             <h4 className="opacity-70 text-right md:text-2xl md:text-left xl:pl-96  ">
               Deliveries{" "}
             </h4>
-            {/* <div className="xs:col-start-1 md:col-start-2 mb-20"> */}
+            
             <a
               className="xs:col-start-1 md:col-start-2 xs:text-lg sm:text-2xl"
               href={` https://${project.demoUrl}`}

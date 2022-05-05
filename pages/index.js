@@ -77,14 +77,20 @@ export default function Home({ projects, clients, educations }) {
     <>
       <Head>
         <title>
-          Philip Charoen Kvam - Front end developer and UI designer based in
-          Oslo. With a passion for creative and digital work.{" "}
+          Philip Charoen Kvam {" "}
         </title>
-        <meta name="description" content="portfolio homepage" />
+        <meta name="description" content="Front end developer and UI designer based in
+          Oslo. With a passion for creative and digital work" />
+          
         <meta property="og:title" content="Philip kvam - front end developer - UI designer" />
-        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:description" content="Philip Charoen Kvam. Front end developer and UI designer based in
+          Oslo. With a passion for creative and digital work." />
+          <meta property="og:url" content="https://philipkvam.no" />
+          <meta property="og:type" content="website" />
       </Head>
 
       <motion.div variants={container}>

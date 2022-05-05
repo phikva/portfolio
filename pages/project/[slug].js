@@ -120,9 +120,16 @@ export default function Project({ project }) {
         </title>
         <meta name="description" content="Project"/>
         <meta property="og:title" content={ `${project.description} - Philip kvam  `} />
-        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:description" content="Philip Charoen Kvam. Front end developer and UI designer based in
+          Oslo. With a passion for creative and digital work." />
+          <meta property="og:url" content="https://philipkvam.no" />
+          <meta property="og:type" content="website" />
+
+
       </Head>
       <motion.div variants={container}>
         <motion.div

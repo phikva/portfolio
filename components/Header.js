@@ -7,7 +7,7 @@ export default function Header() {
       <header className="inline-block">
 
           <div>
-              <h2><Link href="/">Philip Charoen Kvam</Link></h2>
+              <h2 className="logo"><Link href="/">Philip Charoen Kvam</Link></h2>
           </div>
 
         {/* <nav>

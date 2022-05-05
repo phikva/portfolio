@@ -23,7 +23,8 @@ module.exports = {
         'Roc-wide': ['roc-grotesk-wide', 'sans-serif']  
       },
    fontSize: {
-     "5xl" : "2.5rem"
+     "5xl" : "2.5rem",
+     "10xl" : "12rem"
    }
      
     },

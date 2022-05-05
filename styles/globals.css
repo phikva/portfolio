@@ -18,14 +18,14 @@
   }
 
   h2 {
-    @apply font-Roc-wide text-2xl sm:text-3xl;
+    @apply font-Roc-wide text-2xl sm:text-3xl md:text-4xl;
   }
   h3 {
-    @apply font-Roc-wide xs:text-lg sm:text-2xl;
+    @apply font-Roc-wide xs:text-xl sm:text-2xl lg:text-3xl;
   }
 
   h4 {
-    @apply font-Roc-wide xs:text-lg sm:text-xl;
+    @apply font-Roc-wide xs:text-xl sm:text-xl lg:text-2xl;
   }
 
   #__next {
@@ -35,5 +35,23 @@
 @layer components {
     .hero {
         height: 100vh;
+    }
+    .loader {
+       
+
+    }
+    .loader-inner {
+      @apply flex flex-wrap
+
+    }
+    .loader-inner span {
+        @apply xs:text-8xl md:text-9xl xl:text-10xl;
+     
+     
+   
+      
+    }
+    .logo {
+        @apply font-Roc-wide text-2xl sm:text-3xl
     }
 }

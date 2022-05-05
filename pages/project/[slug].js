@@ -107,79 +107,81 @@ const image = {
   },
 };
 
-
 export default function Project({ project }) {
   console.log(project);
 
   return (
     <>
-      <motion.div variants={container}
-    >
-       <motion.div
-            initial="hidden"
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                delay: 0.6,
-                ease: [0.6, 0.01, -0.05, 0.95],
-                duration: 1.2,
-              },
-            }}
-            variants={item}
-          >
-      <div className="grid gap-2 xs:grid-cols-1 md:grid-cols-2 mt-10">
-     
-        <h4 className="opacity-70 text-right md:text-2xl md:text-left lg:pl-96 ">Project information</h4>
-        <div> {project.year}</div>
-        <h2 className="xs:col-start-1 md:col-start-2">{project.title}</h2>
-        <h3 className="mb-10 xs:col-start-1 md:col-start-2">{project.description}</h3>
-        <h4 className="opacity-70 text-right md:text-2xl md:text-left lg:pl-96  ">Deliveries </h4>
-        {/* <div className="xs:col-start-1 md:col-start-2 mb-20"> */}
-            <a 
+      <motion.div variants={container}>
+        <motion.div
+          initial="hidden"
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 0.6,
+              ease: [0.6, 0.01, -0.05, 0.95],
+              duration: 1.2,
+            },
+          }}
+          variants={item}
+        >
+          <div className="grid gap-2 xs:grid-cols-1 md:grid-cols-2 mt-10">
+            <h4 className="opacity-70 text-right md:text-2xl md:text-left lg:pl-96 ">
+              Project information
+            </h4>
+            <div> {project.year}</div>
+            <h2 className="xs:col-start-1 md:col-start-2 ">{project.title}</h2>
+            <h3 className="mb-20 xs:col-start-1 md:col-start-2 lg:text-6xl">
+              {project.description}
+            </h3>
+            <h4 className="opacity-70 text-right md:text-2xl md:text-left xl:pl-96  ">
+              Deliveries{" "}
+            </h4>
+            {/* <div className="xs:col-start-1 md:col-start-2 mb-20"> */}
+            <a
               className="xs:col-start-1 md:col-start-2 xs:text-lg sm:text-2xl"
-              href="https://www.matkreator.no"
+              href={` https://${project.demoUrl}`}
               target="_blank"
               rel="_norefferer noreferrer"
             >
               {project.demoUrl}
             </a>
-     
-       
-          <h4 className="mb-10 opacity-70 xs:col-start-1 md:col-start-2">{project.projectType}</h4>
-    
-        
-      </div>
-      </motion.div>
-      <div className="xs:grid grid gap-x-2 gap-y-0 flex-col lg:grid-cols-1">
-        {project.projectFiles.map(({ id, url }) => (
-          <div key={id}>
-             <motion.div
-            initial="hidden"
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                delay: 0.8,
-                ease: [0.6, 0.01, -0.05, 0.95],
-                duration: 1.2,
-              },
-            }}
-            variants={image}
-          >
-            <Image
-              src={url}
-              alt="project photo and files"
-              height={1500}
-              width={2500}
-              objectFit="cover"
-              quality={100}
-              blurDataURL={url}
-            />
-            </motion.div>
+
+            <h4 className="mb-10 opacity-70 xs:col-start-1 md:col-start-2">
+              {project.projectType}
+            </h4>
           </div>
-        ))}
-      </div>
+        </motion.div>
+        <div className="xs:grid grid gap-x-2 gap-y-0 flex-col lg:grid-cols-1">
+          {project.projectFiles.map(({ id, url }) => (
+            <div key={id}>
+              <motion.div
+                initial="hidden"
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: 0.3,
+                    ease: [0.6, 0.01, -0.05, 0.95],
+                    duration: 0.8,
+                  },
+                }}
+                variants={image}
+              >
+                <Image
+                  src={url}
+                  alt="project photo and files"
+                  height={1500}
+                  width={2500}
+                  objectFit="cover"
+                  quality={100}
+                  blurDataURL={url}
+                />
+              </motion.div>
+            </div>
+          ))}
+        </div>
       </motion.div>
     </>
   );

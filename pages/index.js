@@ -2,7 +2,7 @@ import { GraphQLClient, gql } from "graphql-request";
 import Link from "next/link";
 import Image from "next/image";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion} from "framer-motion";
 
 //variants
 const container = {
@@ -164,7 +164,7 @@ export default function Home({ projects, clients, educations }) {
             variants={item}
           >
             <div className="">
-              <Link href={`/project/${slug}`}>
+              <Link  href={`/project/${slug}`}>
                 <Image
                   src={projectImage.url}
                   alt="project cover photo"

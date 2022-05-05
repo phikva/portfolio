@@ -142,6 +142,7 @@ export default function Project({ project }) {
             <a
               className="xs:col-start-1 md:col-start-2 xs:text-lg sm:text-2xl"
               href={` https://${project.demoUrl}`}
+              passHref={true}
               target="_blank"
               rel="_norefferer noreferrer"
             >

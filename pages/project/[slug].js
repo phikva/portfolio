@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ReactPlayer from "react-player";
 import { AnimatePresence, motion } from "framer-motion";
+import Head from "next/head";
 const graphcms = new GraphQLClient(
   "https://api-eu-west-2.graphcms.com/v2/cl2j8qyb40er901z9fubd5876/master"
 );
@@ -112,6 +113,17 @@ export default function Project({ project }) {
 
   return (
     <>
+    <Head>
+        <title>
+        Philip Charoen Kvam - Project - {project.title} -
+          {" "}
+        </title>
+        <meta name="description" content="Project"/>
+        <meta property="og:title" content={ `${project.description} - Philip kvam  `} />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <motion.div variants={container}>
         <motion.div
           initial="hidden"

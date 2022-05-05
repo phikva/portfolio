@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { useEffect, useState } from "react";
 
+
 import Loader from "../components/Loader";
 
 function MyApp({ Component, pageProps, router }) {
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps, router }) {
   }, [loading]);
 
   return (
+   
     <AnimateSharedLayout type="crossfade">
     <AnimatePresence>
       <motion.div

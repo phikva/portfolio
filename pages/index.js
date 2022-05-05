@@ -164,7 +164,7 @@ export default function Home({ projects, clients, educations }) {
             variants={item}
           >
             <div className="">
-              <Link  href={`/project/${slug}`}>
+              <Link  href={`/project/${slug}`} passHref={true}>
                 <Image
                   src={projectImage.url}
                   alt="project cover photo"

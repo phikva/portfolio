@@ -12,11 +12,11 @@ const container = {
 const item = {
   hidden: {
     opacity: 0,
-    y: 800,
+    y: 100,
   },
   show: {
     opacity: 1,
-    y: 300,
+    y: 50,
     transition: {
       delay: 0.6,
       ease: [0.6, 0.01, -0.05, 0.95],
@@ -35,11 +35,11 @@ const item = {
 const item2 = {
   hidden: {
     opacity: 0,
-    y: 800,
+    y: 150,
   },
   show: {
     opacity: 1,
-    y: 400,
+    y: 100,
     transition: {
       delay: 1,
       ease: [0.6, 0.01, -0.05, 0.95],
@@ -59,11 +59,11 @@ const item2 = {
 const item3 = {
   hidden: {
     opacity: 0,
-    y: 800,
+    y: 200,
   },
   show: {
     opacity: 1,
-    y: 500,
+    y: 150,
     transition: {
       delay: 1.5,
       ease: [0.6, 0.01, -0.05, 0.95],
@@ -82,13 +82,13 @@ const item3 = {
 const item4 = {
     hidden: {
       opacity: 0,
-      x: 500,
+      x: 250,
       y:50,
     },
     show: {
       opacity: 1,
       x: 0,
-      y: 400,
+      y: 200,
       transition: {
         delay: 2,
         ease: [0.6, 0.01, -0.05, 0.95],
@@ -118,7 +118,7 @@ const Loader = ({ setLoading }) => {
         
       >
   <Player
-            className="xs:col-start-1 "
+            className="xs:col-start-1"
             autoplay
             loop
             src="https://assets7.lottiefiles.com/packages/lf20_kesqiuwx.json"

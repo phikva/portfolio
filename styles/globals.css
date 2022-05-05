@@ -41,7 +41,7 @@
 
     }
     .loader-inner {
-      @apply flex flex-wrap justify-around items-center
+      @apply xs:flex flex-wrap justify-around items-center md:block
 
     }
     .loader-inner span {
@@ -54,4 +54,5 @@
     .logo {
         @apply font-Roc-wide text-2xl sm:text-3xl
     }
+    
 }

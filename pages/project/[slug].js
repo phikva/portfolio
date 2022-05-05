@@ -129,9 +129,9 @@ export default function Project({ project }) {
           <meta property="og:url" content="https://philipkvam.no" />
           <meta property="og:type" content="website" />
           <meta name="keywords" content={ `${project.description} `} />
-      <meta property="image" content="" />
+      <meta property="image" content={ `${project.projectFiles[0].url} `}  />
       <meta property="og:description" content="Front end developer and UI designer based in
-          Oslo. With a passion for creative and digital work" />
+          Oslo. With a passion for creative and digital work"  />
       </Head>
       <motion.div variants={container}>
         <motion.div

@@ -117,7 +117,7 @@ export default function Home({ projects, clients, educations }) {
             </motion.div>
           </h1>
 
-          <a href="#selected-work" className="h-fit">
+          <a href="#selected-work" className="h-full relative bottom-1/3">
             <motion.div
               initial="hidden"
               whileInView={{
@@ -132,7 +132,7 @@ export default function Home({ projects, clients, educations }) {
               variants={item}
             >
               <Player
-                className="xs:col-start-1 "
+                className="xs:col-start-1"
                 autoplay
                 loop
                 src="https://assets9.lottiefiles.com/packages/lf20_x7d5lmxs.json"

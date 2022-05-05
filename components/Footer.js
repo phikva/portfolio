@@ -50,7 +50,7 @@ export default function Footer() {
         <span>2022</span>
         <span> <a className=" underline md:pr-1" href="https://www.linkedin.com/in/philip-kvam-5b16601a3" target="_blank" rel="noreferrer" >LinkedIn</a></span>
         <span> <a className="underline  md:pr-1" href="https://github.com/phikva?tab=repositories" target="_blank" rel="noreferrer" >Github</a></span>
-        <span> <a className="underline  md:pr-1" href="" target="_blank" >Facebook</a></span>
+        <span> <a className="underline  md:pr-1" href="https://www.facebook.com/philip.kvam/" target="_blank" rel="noreferrer" >Facebook</a></span>
       </div>
   
     </footer>

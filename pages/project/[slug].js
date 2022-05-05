@@ -130,8 +130,8 @@ export default function Project({ project }) {
             <h4 className="opacity-70 text-right md:text-2xl md:text-left lg:pl-96 ">
               Project information
             </h4>
-            <div> {project.year}</div>
-            <h2 className="xs:col-start-1 md:col-start-2 ">{project.title}</h2>
+            <div className="grid items-end"> {project.year}</div>
+            <h2 className="xs:col-start-1 md:col-start-2 lg:text-3xl">{project.title}</h2>
             <h3 className="mb-20 xs:col-start-1 md:col-start-2 lg:text-6xl">
               {project.description}
             </h3>

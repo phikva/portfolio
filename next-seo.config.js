@@ -5,7 +5,7 @@ export default {
       type: 'website',
       locale: 'en_IE',
       url: 'https://www.philipkvam.no',
-      site_name: 'SiteName',
+      site_name: "Portfolio webpage",
       images: [
         {
           url: 'https://res.cloudinary.com/dshividze/image/upload/v1651842582/2022-05-05_2_emakhn.png',

@@ -75,27 +75,43 @@ export async function getStaticProps() {
 export default function Home({ projects, clients, educations }) {
   return (
     <>
-      <Head>
-        <title>
-          Philip Charoen Kvam {" "}
-        </title>
-        <meta name="description" content="Front end developer and UI designer based in
-          Oslo. With a passion for creative and digital work" />
-                <meta name="keywords" content="Front end development, UI design, projects, clients ,education" />
-                <meta property="og:description" content="Front end developer and UI designer based in
-          Oslo. With a passion for creative and digital work" />
-      <meta property="image" content="" />
-        <meta property="og:title" content="Philip kvam - front end developer - UI designer" />
+      {/* <Head>
+        <title>Philip Charoen Kvam </title>
+        <meta
+          name="description"
+          content="Front end developer and UI designer based in
+          Oslo. With a passion for creative and digital work"
+        />
+        <meta
+          name="keywords"
+          content="Front end development, UI design, projects, clients ,education"
+        />
+        <meta
+          property="og:description"
+          content="Front end developer and UI designer based in
+          Oslo. With a passion for creative and digital work"
+        />
+        <meta property="image" content="" />
+        <meta
+          property="og:title"
+          content="Philip kvam - front end developer - UI designer"
+        />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <meta name="robots" content="index,follow" />
-        <meta property="og:description" content="Philip Charoen Kvam. Front end developer and UI designer based in
-          Oslo. With a passion for creative and digital work." />
-          <meta property="og:title" content="Philip Charoen Kvam" />
-          <meta property="og:url" content="https://www.philipkvam.no" />
-          <meta property="og:type" content="website" />
-      </Head>
+        <meta
+          property="og:description"
+          content="Philip Charoen Kvam. Front end developer and UI designer based in
+          Oslo. With a passion for creative and digital work."
+        />
+        <meta property="og:title" content="Philip Charoen Kvam" />
+        <meta property="og:url" content="https://www.philipkvam.no" />
+        <meta property="og:type" content="website" />
+      </Head> */}
 
       <motion.div variants={container}>
         <div className="grid gap-2 xs:grid-cols-1 md:grid-cols-3 mt-5 hero ">

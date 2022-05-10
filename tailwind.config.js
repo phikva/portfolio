@@ -4,11 +4,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    
+    fontFamily: {
+      'Neue': ['aktiv-grotesk', 'helvetica'],
+      'Neue-bold': ['aktiv-grotesk', 'helvetica']  
+    },
     colors: {
-      'black': '#000',
+      'black': '#17171c',
       'white': '#fff',
-      "orange": "#ff512a"
+      "green": "#e7fa90",
+      "orange": "#fa9f90"
     },
     screens: {
       xs: '370px',
@@ -18,10 +22,7 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
-      fontFamily: {
-        'Roc': ['roc-grotesk', 'sans-serif'],
-        'Roc-wide': ['roc-grotesk-wide', 'sans-serif']  
-      },
+    
    fontSize: {
      "5xl" : "2.5rem",
      "10xl" : "12rem"

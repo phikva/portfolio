@@ -121,7 +121,9 @@ openGraph: {
   return (
     <>
   <NextSeo {...SEO} />
-      <motion.div variants={container}>
+      <motion.div variants={container}
+     
+      >
         <motion.div
           initial="hidden"
           whileInView={{
@@ -136,12 +138,12 @@ openGraph: {
           variants={item}
         >
           <div className="grid gap-2 xs:grid-cols-1 md:grid-cols-2 mt-10">
-            <h4 className="opacity-70 text-right md:text-2xl md:text-left lg:pl-96 ">
+            <h4 className="opacity-70 text-right md:text-2xl md:text-left xl:pl-96 ">
               Project information
             </h4>
             <div className="grid items-end"> {project.year}</div>
-            <h2 className="xs:col-start-1 md:col-start-2 lg:text-3xl">{project.title}</h2>
-            <h3 className="mb-20 xs:col-start-1 md:col-start-2 lg:text-6xl">
+            <h2 className="xs:col-start-1 md:col-start-2 md:text-2xl">{project.title}</h2>
+            <h3 className="font-regular  mb-20 xs:col-start-1 md:col-start-2 lg:text-6xl">
               {project.description}
             </h3>
             <h4 className="opacity-70 text-right md:text-2xl md:text-left xl:pl-96  ">
@@ -196,3 +198,5 @@ openGraph: {
     </>
   );
 }
+
+

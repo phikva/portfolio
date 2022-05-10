@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/pym3ipg.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,53 +8,52 @@
   body {
     min-width: 360px;
     max-width: 2500px;
-    font-family: roc-grotesk, sans-serif;
+    font-family: 'aktiv-grotesk', 'helvetica';
+    font-weight: 400;
     font-size: 16px;
     padding: 0;
     margin: 0 auto;
-    background-color: theme("colors.black");
-    color: theme("colors.white");
+    background-color: theme("colors.white");
+    color: theme("colors.black");
+    overflow-x:hidden;
   }
+html {
+  @apply scroll-smooth;
+}
+p {
+  font-family: 'aktiv-grotesk', 'helvetica';
+}
   h1 {
-    @apply font-Roc-wide text-5xl leading-10  md:text-7xl;
+    @apply font-Neue-bold font-bold text-5xl leading-10  md:text-7xl;
   }
 
   h2 {
-    @apply font-Roc-wide text-2xl sm:text-3xl md:text-4xl;
+    @apply font-Neue-bold text-2xl sm:text-3xl md:text-4xl;
   }
   h3 {
-    @apply font-Roc-wide xs:text-xl sm:text-2xl lg:text-3xl;
+    @apply font-Neue-bold xs:text-base sm:text-2xl lg:text-3xl;
   }
 
   h4 {
-    @apply font-Roc-wide xs:text-xl sm:text-xl lg:text-2xl;
+    @apply font-Neue-bold xs:text-base sm:text-lg lg:text-2xl;
   }
 
   #__next {
-    margin: 1em 1em;
+   
   }
 }
 @layer components {
+ 
     .hero {
-        height: 100vh;
+        height: 90vh;
     }
-    .loader {
-       @apply m-0 p-0
-
-    }
-    .loader-inner {
-      @apply xs:flex flex-wrap justify-around items-center md:grid grid-cols-1
-
-    }
-    .loader-inner span {
-        @apply leading-3 xs:text-8xl md:text-9xl xl:text-10xl;
-     
-     
-   
-      
+    
+    
+    .custom-height {
+      height:70vh;
     }
     .logo {
-        @apply font-Roc-wide text-2xl sm:text-3xl
+        @apply font-Neue-bold font-normal text-2xl sm:text-3xl xl:text-5xl;
     }
     
 }

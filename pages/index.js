@@ -12,6 +12,30 @@ const container = {
     },
   },
 };
+
+const TopItem = {
+  hidden: {
+    opacity: 0,
+    y: 200,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -200,
+    transition: {
+      ease: "easeInOut",
+      duration: 0.8,
+    },
+  },
+};
+
 const item = {
   hidden: {
     opacity: 0,
@@ -75,45 +99,9 @@ export async function getStaticProps() {
 export default function Home({ projects, clients, educations }) {
   return (
     <>
-      {/* <Head>
-        <title>Philip Charoen Kvam </title>
-        <meta
-          name="description"
-          content="Front end developer and UI designer based in
-          Oslo. With a passion for creative and digital work"
-        />
-        <meta
-          name="keywords"
-          content="Front end development, UI design, projects, clients ,education"
-        />
-        <meta
-          property="og:description"
-          content="Front end developer and UI designer based in
-          Oslo. With a passion for creative and digital work"
-        />
-        <meta property="image" content="" />
-        <meta
-          property="og:title"
-          content="Philip kvam - front end developer - UI designer"
-        />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta
-          name="viewport"
-          content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-        />
-        <meta name="robots" content="index,follow" />
-        <meta
-          property="og:description"
-          content="Philip Charoen Kvam. Front end developer and UI designer based in
-          Oslo. With a passion for creative and digital work."
-        />
-        <meta property="og:title" content="Philip Charoen Kvam" />
-        <meta property="og:url" content="https://www.philipkvam.no" />
-        <meta property="og:type" content="website" />
-      </Head> */}
-
-      <motion.div variants={container}>
+      <motion.div variants={container}
+      
+      >
         <div className="grid gap-2 xs:grid-cols-1 md:grid-cols-3 mt-5 hero ">
           <h1 className="xs:col-start-1 md:col-span-3 max-w-7xl ">
             <motion.div
@@ -129,13 +117,17 @@ export default function Home({ projects, clients, educations }) {
               }}
               variants={item}
             >
-              Front end developer and UI designer based in Oslo. With a passion
+              <span className="text-orange">Front end developer</span> and <span className="text-orange">UI designer</span> based in Oslo. With a passion
               for creative and digital work.
             </motion.div>
           </h1>
 
-          <a href="#selected-work" className="h-full relative bottom-1/3">
+          <a
+            href="#scroll-down"
+            className="xs:row-start-2 md:col-start-2 h-full "
+          >
             <motion.div
+              className="relative top-1/4"
               initial="hidden"
               whileInView={{
                 opacity: 1,
@@ -148,11 +140,14 @@ export default function Home({ projects, clients, educations }) {
               }}
               variants={item}
             >
+                <p className="text-center  md:text-lg lg:text-xl">
+                {" "}
+                Some of the stuff I do
+              </p>
               <Player
-                className="xs:col-start-1"
                 autoplay
                 loop
-                src="https://assets9.lottiefiles.com/packages/lf20_x7d5lmxs.json"
+                src="https://assets9.lottiefiles.com/packages/lf20_ddfvanih.json"
                 style={{ height: "150px", width: "150x" }}
               >
                 <Controls
@@ -160,28 +155,108 @@ export default function Home({ projects, clients, educations }) {
                   buttons={["play", "repeat", "frame", "debug"]}
                 />
               </Player>
+            
             </motion.div>
           </a>
         </div>
 
-        <div className="grid gap-2 xs:grid-cols-1 md:grid-cols-3">
+        <div id="scroll-down" className="h-screen grid  md:grid-cols-3">
           <motion.div
             initial="hidden"
             whileInView={{
               opacity: 1,
               y: 0,
               transition: {
-                delay: 0.2,
+                delay: 0.3,
                 ease: [0.6, 0.01, -0.05, 0.95],
-                duration: 1.2,
+                duration: 1.6,
               },
             }}
-            variants={item}
+            variants={TopItem}
+            className="font-Neue-bold font-bold text-2xl sm:text-3xl md:text-5xl xl:text-7xl self-center md:col-span-2"
           >
-            <h3 id="selected-work">selected work</h3>
+            Develop interactive, scalable and dynamic solutions, with experience
+            in frameworks and content managment systems such as
+            <div className=" mt-10 text-orange">
+              React.js, Next.js, Sanity.io, and GraphCMS.
+            </div>
           </motion.div>
+          <a
+            href="#scroll-down-again"
+            className="xs:row-start-2 md:col-start-2 h-full "
+          >
+            <motion.div
+              className="relative top-1/4"
+              initial="hidden"
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.8,
+                  ease: [0.6, 0.01, -0.05, 0.95],
+                  duration: 1.2,
+                },
+              }}
+              variants={item}
+            >
+                <p className="text-center  md:text-lg lg:text-xl">
+                {" "}
+                More stuff I do
+              </p>
+              <Player
+                autoplay
+                loop
+                src="https://assets9.lottiefiles.com/packages/lf20_ddfvanih.json"
+                style={{ height: "150px", width: "150x" }}
+              >
+                <Controls
+                  visible={false}
+                  buttons={["play", "repeat", "frame", "debug"]}
+                />
+              </Player>
+            
+            </motion.div>
+          </a>
+        </div>
+
+        <div id="scroll-down-again"className="custom-height flex items-center md:grid grid-cols-2">
+          <motion.div
+            initial="hidden"
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 0.3,
+                ease: [0.6, 0.01, -0.05, 0.95],
+                duration: 1.6,
+              },
+            }}
+            variants={TopItem}
+            className="font-Neue-bold font-bold text-2xl sm:text-3xl md:text-5xl xl:text-7xl md:col-start-2"
+          >
+            Design consistent, user-friendly, and intuitive interfaces with
+            <span className="text-orange pl-2">Figma and Adobe XD.</span>
+          </motion.div>
+         
+        </div>
+        <h3 className="mb-2">selected work</h3>
+        <motion.div
+          className="grid gap-2 xs:grid-cols-1 md:grid-cols-1"
+          initial="hidden"
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 0.3,
+              ease: [0.6, 0.01, -0.05, 0.95],
+              duration: 1.6,
+            },
+          }}
+          variants={item}
+        >
+          
           {projects.map(({ id, title, slug, projectImage }) => (
-            <div key={id} className="mb-5">
+            <div key={id} className="xs:mb-10 lg:mb-32">
               <motion.div
                 initial="hidden"
                 whileInView={{
@@ -195,104 +270,88 @@ export default function Home({ projects, clients, educations }) {
                 }}
                 variants={item}
               >
-                <div className="">
+                <div className="hover:cursor-pointer">
                   <Link href={`/project/${slug}`} passHref={true}>
                     <Image
                       src={projectImage.url}
                       alt="project cover photo"
-                      height={700}
-                      width={1000}
+                      height={1500}
+                      width={2500}
                       objectFit="cover"
                     />
                   </Link>
                 </div>
 
-                <div>
-                  <h4>
+                <div className="mt-2 lg:mt-6">
+                  <h4 className="xl:text-5xl">
                     <Link href={`/project/${slug}`}>
                       <a>{title}</a>
                     </Link>
-                  </h4>
+                    <a href={`/project/${slug}`} className="ml-5 xs:py-1 px-4 rounded-full border-2 transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 hover:bg-orange duration-300">View</a>
+                  </h4> 
+                 
                 </div>
               </motion.div>
             </div>
           ))}
-        </div>
-        <div className="grid xs:grid-cols-1 mt-10 md:grid-cols-3">
+        </motion.div>
+        <div className="grid xs:grid-cols-1 mt-20 md:grid-cols-3">
+        <h3 className="">clients</h3>
           <motion.div
+          className="md:col-start-2"
             initial="hidden"
             whileInView={{
               opacity: 1,
               y: 0,
               transition: {
-                delay: 0.2,
+                delay: 0.3,
                 ease: [0.6, 0.01, -0.05, 0.95],
-                duration: 1.2,
+                duration: 1.6,
               },
             }}
             variants={item}
           >
-            <h3>clients</h3>
-          </motion.div>
+            
+           
+          
+          
           {clients.map(({ id, title }) => (
             <div key={id} className="mb-20">
-              <motion.div
-                initial="hidden"
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    delay: 0.2,
-                    ease: [0.6, 0.01, -0.05, 0.95],
-                    duration: 1.2,
-                  },
-                }}
-                variants={item}
-              >
+           
                 <h4>
                   {title}{" "}
                   <span className="opacity-70">
                     (Visual identity, UI/UX, Web dev)
                   </span>
                 </h4>
-              </motion.div>
+                
+           
             </div>
           ))}
+          </motion.div>
+          <h3 className="md:col-start-1 ">education</h3>
           <motion.div
-            className="xs:col-start-1"
+            className="md:col-start-2"
             initial="hidden"
             whileInView={{
               opacity: 1,
               y: 0,
               transition: {
-                delay: 0.2,
+                delay: 0.3,
                 ease: [0.6, 0.01, -0.05, 0.95],
-                duration: 1.2,
+                duration: 1.6,
               },
             }}
             variants={item}
           >
-            <h3>education</h3>
-          </motion.div>
-          {educations.map(({ id, title }) => (
-            <div key={id} className="md:col-start-2 pb-1">
-              <motion.div
-                initial="hidden"
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    delay: 0.2,
-                    ease: [0.6, 0.01, -0.05, 0.95],
-                    duration: 1.2,
-                  },
-                }}
-                variants={item}
-              >
+             
+
+            {educations.map(({ id, title }) => (
+              <div key={id} className="md:col-start-3 pb-1">
                 <h4>{title}</h4>
-              </motion.div>
-            </div>
-          ))}
+              </div>
+            ))}
+          </motion.div>
         </div>
       </motion.div>
     </>

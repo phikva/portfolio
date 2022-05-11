@@ -8,7 +8,7 @@ export default {
       site_name: "Portfolio webpage",
       images: [
         {
-          url: 'https://res.cloudinary.com/dshividze/image/upload/v1651842582/2022-05-05_2_emakhn.png',
+          url: 'https://res.cloudinary.com/dshividze/image/upload/v1652265954/2022-05-11_2_xxigqw.png',
           width: 800,
           height: 600,
           alt: ' image of landing page',

@@ -103,7 +103,7 @@ export default function Home({ projects, clients, educations }) {
       
       >
         <div className="grid gap-2 xs:grid-cols-1 md:grid-cols-3 mt-5 hero ">
-          <h1 className="xs:col-start-1 md:col-span-3 max-w-7xl ">
+          <h1 className="xs:col-start-1 items-start md:col-span-3 max-w-7xl ">
             <motion.div
               initial="hidden"
               whileInView={{
@@ -127,7 +127,7 @@ export default function Home({ projects, clients, educations }) {
             className="xs:row-start-2 md:col-start-2 h-full "
           >
             <motion.div
-              className="relative top-1/4"
+              className="relative top-1/5"
               initial="hidden"
               whileInView={{
                 opacity: 1,
@@ -140,10 +140,7 @@ export default function Home({ projects, clients, educations }) {
               }}
               variants={item}
             >
-                <p className="text-center  md:text-lg lg:text-xl">
-                {" "}
-                Some of the stuff I do
-              </p>
+              
               <Player
                 autoplay
                 loop
@@ -155,7 +152,10 @@ export default function Home({ projects, clients, educations }) {
                   buttons={["play", "repeat", "frame", "debug"]}
                 />
               </Player>
-            
+              <p className="text-center  md:text-lg lg:text-xl">
+                {" "}
+                Some of the stuff I do
+              </p>
             </motion.div>
           </a>
         </div>
@@ -186,7 +186,7 @@ export default function Home({ projects, clients, educations }) {
             className="xs:row-start-2 md:col-start-2 h-full "
           >
             <motion.div
-              className="relative top-1/4"
+              className="relative top-1/5"
               initial="hidden"
               whileInView={{
                 opacity: 1,
@@ -199,10 +199,7 @@ export default function Home({ projects, clients, educations }) {
               }}
               variants={item}
             >
-                <p className="text-center  md:text-lg lg:text-xl">
-                {" "}
-                More stuff I do
-              </p>
+               
               <Player
                 autoplay
                 loop
@@ -214,7 +211,10 @@ export default function Home({ projects, clients, educations }) {
                   buttons={["play", "repeat", "frame", "debug"]}
                 />
               </Player>
-            
+              <p className="text-center  md:text-lg lg:text-xl">
+                {" "}
+                More stuff I do
+              </p>
             </motion.div>
           </a>
         </div>

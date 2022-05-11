@@ -4,6 +4,11 @@ import Image from "next/image";
 import ReactPlayer from "react-player";
 import { AnimatePresence, motion } from "framer-motion";
 import {NextSeo}  from "next-seo";
+import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import { useRef } from 'react';
+
+
+
 const graphcms = new GraphQLClient(
   "https://api-eu-west-2.graphcms.com/v2/cl2j8qyb40er901z9fubd5876/master"
 );
@@ -108,7 +113,14 @@ const image = {
   },
 };
 
+// scroll to element
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
+
 export default function Project({ project}) {
+
+  const myRef = useRef(null)
+  const executeScroll = () => scrollToRef(myRef)
+
   console.log(project);
 const SEO = {
 title: `Philip Charoen Kvam  | Project - ${project.title}  `,
@@ -122,7 +134,7 @@ openGraph: {
     <>
   <NextSeo {...SEO} />
       <motion.div variants={container}
-     
+     ref={myRef}
       >
         <motion.div
           initial="hidden"
@@ -193,7 +205,45 @@ openGraph: {
               </motion.div>
             </div>
           ))}
+          
         </div>
+        <a
+           onClick={executeScroll}
+            className="block mx-auto h-full mt-20"
+          >
+            <motion.div
+              className="relative top-1/5"
+              initial="hidden"
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.8,
+                  ease: [0.6, 0.01, -0.05, 0.95],
+                  duration: 1.2,
+                },
+              }}
+              variants={item}
+            >
+               <p className="text-center  md:text-lg lg:text-xl">
+                {" "}
+                Top
+              </p>
+              <Player
+              className="rotate-180 "
+                autoplay
+                loop
+                src="https://assets9.lottiefiles.com/packages/lf20_ddfvanih.json"
+                style={{ height: "70px", width: "70x", }}
+              >
+                <Controls
+                  visible={false}
+                  buttons={["play", "repeat", "frame", "debug"]}
+                />
+              </Player>
+              
+            </motion.div>
+          </a>
       </motion.div>
     </>
   );

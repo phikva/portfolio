@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { AnimatePresence, motion } from "framer-motion";
-import Head from "next/head";
+import { useRef } from 'react';
+
 //variants
 const container = {
   show: {
@@ -96,10 +97,25 @@ export async function getStaticProps() {
   };
 }
 
+// scroll to element
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)  
+
+
 export default function Home({ projects, clients, educations }) {
+
+  
+const myRef = useRef(null)
+const myRef2 = useRef(null)
+const myRef3 = useRef(null)
+const executeScroll = () => scrollToRef(myRef)
+const executeScroll2 = () => scrollToRef(myRef2)
+const executeScroll3 = () => scrollToRef(myRef3)
+
   return (
     <>
+    <span ref={myRef3}></span>
       <motion.div variants={container}
+      
       
       >
         <div className="grid gap-2 xs:grid-cols-1 md:grid-cols-3 mt-5 hero ">
@@ -123,7 +139,7 @@ export default function Home({ projects, clients, educations }) {
           </h1>
 
           <a
-            href="#scroll-down"
+            onClick={executeScroll}
             className="xs:row-start-2 md:col-start-2 h-full "
           >
             <motion.div
@@ -160,7 +176,7 @@ export default function Home({ projects, clients, educations }) {
           </a>
         </div>
 
-        <div id="scroll-down" className="h-screen grid  md:grid-cols-3">
+        <div ref={myRef} className="h-screen grid  md:grid-cols-3">
           <motion.div
             initial="hidden"
             whileInView={{
@@ -182,7 +198,7 @@ export default function Home({ projects, clients, educations }) {
             </div>
           </motion.div>
           <a
-            href="#scroll-down-again"
+           onClick={executeScroll2}
             className="xs:row-start-2 md:col-start-2 h-full "
           >
             <motion.div
@@ -219,7 +235,7 @@ export default function Home({ projects, clients, educations }) {
           </a>
         </div>
 
-        <div id="scroll-down-again"className="custom-height flex items-center md:grid grid-cols-2">
+        <div ref={myRef2} className="custom-height flex items-center md:grid grid-cols-2">
           <motion.div
             initial="hidden"
             whileInView={{
@@ -345,15 +361,58 @@ export default function Home({ projects, clients, educations }) {
             variants={item}
           >
              
-
+            
             {educations.map(({ id, title }) => (
               <div key={id} className="md:col-start-3 pb-1">
                 <h4>{title}</h4>
               </div>
             ))}
           </motion.div>
+          
         </div>
+        <div className="w-full flex mt-20">
+        {/* <span className="h-fit w-fit mx-auto rounded-full border-2 xs:py-2 xs:px-4 md:col-start-3">Top</span> */}
+
+        <a
+           onClick={executeScroll3}
+            className="mx-auto h-full"
+          >
+            <motion.div
+              className="relative top-1/5"
+              initial="hidden"
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.8,
+                  ease: [0.6, 0.01, -0.05, 0.95],
+                  duration: 1.2,
+                },
+              }}
+              variants={item}
+            >
+               <p className="text-center  md:text-lg lg:text-xl">
+                {" "}
+                Top
+              </p>
+              <Player
+              className="rotate-180 "
+                autoplay
+                loop
+                src="https://assets9.lottiefiles.com/packages/lf20_ddfvanih.json"
+                style={{ height: "70px", width: "70x", }}
+              >
+                <Controls
+                  visible={false}
+                  buttons={["play", "repeat", "frame", "debug"]}
+                />
+              </Player>
+              
+            </motion.div>
+          </a>
+        </div>
+        
       </motion.div>
-    </>
+</>
   );
 }

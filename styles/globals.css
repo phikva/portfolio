@@ -20,11 +20,14 @@
 html {
   @apply scroll-smooth;
 }
+a{
+  @apply hover:cursor-pointer
+}
 p {
   font-family: 'aktiv-grotesk', 'helvetica';
 }
   h1 {
-    @apply font-Neue-bold font-bold text-5xl leading-10  md:text-7xl;
+    @apply font-Neue-bold font-bold text-4xl leading-10  md:text-7xl;
   }
 
   h2 {

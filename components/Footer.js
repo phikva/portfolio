@@ -47,10 +47,10 @@ export default function Footer() {
         <a className="underline" href="mailto:philipkvam91@gmail.com">philipkvam91@gmail.com</a>
       </div>
       <div className="xs:text-lg sm:text-xl">
-        <span className="md:pr-4">2022</span>
-        <span> <a className=" underline md:pr-4" href="https://www.linkedin.com/in/philip-kvam-5b16601a3" target="_blank" rel="noreferrer" >LinkedIn</a></span>
-        <span> <a className="underline  md:pr-4" href="https://github.com/phikva?tab=repositories" target="_blank" rel="noreferrer" >Github</a></span>
-        <span> <a className="underline  md:pr-4" href="https://www.facebook.com/philip.kvam/" target="_blank" rel="noreferrer" >Facebook</a></span>
+        <span className="xs:pr-2 md:pr-4">2022</span>
+        <span> <a className=" underline xs:pr-2 md:pr-4" href="https://www.linkedin.com/in/philip-kvam-5b16601a3" target="_blank" rel="noreferrer" >LinkedIn</a></span>
+        <span> <a className="underline xs:pr-2 md:pr-4" href="https://github.com/phikva?tab=repositories" target="_blank" rel="noreferrer" >Github</a></span>
+        <span> <a className="underline xs:pr-2 md:pr-4" href="https://www.facebook.com/philip.kvam/" target="_blank" rel="noreferrer" >Facebook</a></span>
       </div>
   
     </footer>

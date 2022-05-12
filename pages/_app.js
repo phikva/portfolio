@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps, router }) {
       <DefaultSeo {...SEO} />
       <AnimatePresence>
         <motion.div
-        className="xs:m-5 md:m-14 lg:m-32 xl:m-36"
+        className="xs:m-5 md:mx-14 md:mt-14 lg:mx-32 lg:mt-32 xl:mx-36"
           key={router.route}
           initial="pageInitial"
           animate="pageAnimate"

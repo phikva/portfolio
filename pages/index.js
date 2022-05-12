@@ -135,7 +135,7 @@ export default function Home({ projects, clients, educations }) {
 
           <a
             onClick={executeScroll}
-            className="xs:row-start-2 md:col-start-2 h-full "
+            className="xs:row-start-2 md:col-start-2 h-full"
           >
             <motion.div
               className="relative top-1/5"
@@ -283,7 +283,7 @@ export default function Home({ projects, clients, educations }) {
                 <div className="hover:cursor-pointer">
                   <Link href={`/project/${slug}`} passHref={true}>
                     <Image
-                    
+                    className="transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110  duration-300"
                       src={projectImage.url}
                       alt="project cover photo"
                       height={1500}

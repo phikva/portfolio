@@ -29,6 +29,7 @@ const QUERY = gql`
       projectImage {
         url
       }
+ 
     }
   }
 `;
@@ -121,7 +122,6 @@ export default function Project({ project}) {
   const myRef = useRef(null)
   const executeScroll = () => scrollToRef(myRef)
 
-  console.log(project);
 const SEO = {
 title: `Philip Charoen Kvam  | Project - ${project.title}  `,
 description: project.description,
@@ -162,7 +162,7 @@ openGraph: {
               Deliveries{" "}
             </h4>
             
-            <a
+              {project.demoUrl ? <a
               className="xs:col-start-1 md:col-start-2 xs:text-lg sm:text-2xl"
               href={` https://${project.demoUrl}`}
               passHref={true}
@@ -170,7 +170,7 @@ openGraph: {
               rel="_norefferer noreferrer"
             >
               {project.demoUrl}
-            </a>
+            </a> : "" }
 
             <h4 className="mb-10 opacity-70 xs:col-start-1 md:col-start-2">
               {project.projectType}
@@ -178,6 +178,9 @@ openGraph: {
           </div>
         </motion.div>
         <div className="xs:grid grid gap-x-2 gap-y-0 flex-col lg:grid-cols-1">
+          
+        
+
           {project.projectFiles.map(({ id, url }) => (
             <div key={id}>
               <motion.div

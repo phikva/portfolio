@@ -120,9 +120,9 @@ export default function Home({ projects, clients, educations }) {
                 opacity: 1,
                 y: 0,
                 transition: {
-                  delay: 0.6,
+                  delay: 0.3,
                   ease: [0.6, 0.01, -0.05, 0.95],
-                  duration: 1.2,
+                  duration: 1
                 },
               }}
               variants={item}
@@ -144,9 +144,9 @@ export default function Home({ projects, clients, educations }) {
                 opacity: 1,
                 y: 0,
                 transition: {
-                  delay: 0.8,
+                  delay: 0.3,
                   ease: [0.6, 0.01, -0.05, 0.95],
-                  duration: 1.2,
+                  duration: 1
                 },
               }}
               variants={item}
@@ -179,7 +179,7 @@ export default function Home({ projects, clients, educations }) {
               transition: {
                 delay: 0.3,
                 ease: [0.6, 0.01, -0.05, 0.95],
-                duration: 1.6,
+                duration: 1
               },
             }}
             variants={TopItem}
@@ -202,9 +202,9 @@ export default function Home({ projects, clients, educations }) {
                 opacity: 1,
                 y: 0,
                 transition: {
-                  delay: 0.8,
+                  delay: 0.3,
                   ease: [0.6, 0.01, -0.05, 0.95],
-                  duration: 1.2,
+                  duration: 1
                 },
               }}
               variants={item}
@@ -240,7 +240,7 @@ export default function Home({ projects, clients, educations }) {
               transition: {
                 delay: 0.3,
                 ease: [0.6, 0.01, -0.05, 0.95],
-                duration: 1.6,
+                duration: 1
               },
             }}
             variants={TopItem}
@@ -260,7 +260,7 @@ export default function Home({ projects, clients, educations }) {
             transition: {
               delay: 0.3,
               ease: [0.6, 0.01, -0.05, 0.95],
-              duration: 1.6,
+              duration: 1
             },
           }}
           variants={item}
@@ -273,9 +273,9 @@ export default function Home({ projects, clients, educations }) {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    delay: 0.2,
+                    delay: 0.3,
                     ease: [0.6, 0.01, -0.05, 0.95],
-                    duration: 1.2,
+                    duration: 1
                   },
                 }}
                 variants={item}
@@ -321,7 +321,7 @@ export default function Home({ projects, clients, educations }) {
               transition: {
                 delay: 0.3,
                 ease: [0.6, 0.01, -0.05, 0.95],
-                duration: 1.6,
+                duration: 1
               },
             }}
             variants={item}
@@ -347,7 +347,7 @@ export default function Home({ projects, clients, educations }) {
               transition: {
                 delay: 0.3,
                 ease: [0.6, 0.01, -0.05, 0.95],
-                duration: 1.6,
+                duration: 1
               },
             }}
             variants={item}
@@ -370,9 +370,9 @@ export default function Home({ projects, clients, educations }) {
                 opacity: 1,
                 y: 0,
                 transition: {
-                  delay: 0.8,
+                  delay: 0.3,
                   ease: [0.6, 0.01, -0.05, 0.95],
-                  duration: 1.2,
+                  duration: 1
                 },
               }}
               variants={item}

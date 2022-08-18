@@ -188,7 +188,7 @@ export default function Home({ projects, clients, educations }) {
             Develop interactive, scalable and dynamic solutions, with experience
             in frameworks and content managment systems such as
             <div className=" mt-10 text-orange">
-              React.js, Next.js, Sanity.io, and GraphCMS.
+              React.js, Next.js, Sanity.io, and Hygraph.
             </div>
           </motion.div>
           <a

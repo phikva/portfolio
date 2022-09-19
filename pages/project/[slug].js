@@ -137,6 +137,7 @@ openGraph: {
      ref={myRef}
       >
         <motion.div
+      className=""
           initial="hidden"
           whileInView={{
             opacity: 1,
@@ -149,6 +150,42 @@ openGraph: {
           }}
           variants={item}
         >
+               <Link href="/" passHref
+            
+          >
+            <motion.div
+              className="flex relative right-4 mt-6 hover:cursor-pointer w-fit"
+              initial="hidden"
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.8,
+                  ease: [0.6, 0.01, -0.05, 0.95],
+                  duration: 1.2,
+                },
+              }}
+              variants={item}
+            >
+               {/* <p className="text-center  md:text-lg lg:text-xl">
+                {" "}
+                Top
+              </p> */}
+              <Player
+              className="rotate-180 "
+                autoplay
+                loop
+                src="https://lottie.host/2866deba-d513-45b2-a6a0-3729f718032a/nzTdfk4TCw.json"
+                style={{ height: "70px", width: "70x",transform: "rotate(-90deg)" }}
+              >
+                <Controls
+                  visible={false}
+                  buttons={["play", "repeat", "frame", "debug"]}
+                />
+              </Player>
+              
+            </motion.div>
+          </Link>
           <div className="grid gap-2 xs:grid-cols-1 md:grid-cols-2 mt-10">
             <h4 className="opacity-70 text-right md:text-2xl md:text-left xl:pl-96 ">
               Project information
@@ -177,7 +214,7 @@ openGraph: {
             </h4>
           </div>
         </motion.div>
-        <div className="xs:grid grid gap-x-2 gap-y-0 flex-col lg:grid-cols-1">
+        <div className="xs:grid grid gap-x-2 gap-y-0 md:w-8/12 md:relative left-1/3">
           
         
 
@@ -212,10 +249,10 @@ openGraph: {
         </div>
         <a
            onClick={executeScroll}
-            className="block mx-auto h-full mt-20"
+            className="xs:block md:flex h-full mt-20"
           >
             <motion.div
-              className="relative top-1/5"
+              // className="top-1/5"
               initial="hidden"
               whileInView={{
                 opacity: 1,
@@ -228,16 +265,16 @@ openGraph: {
               }}
               variants={item}
             >
-               <p className="text-center  md:text-lg lg:text-xl">
+               {/* <p className="text-center  md:text-lg lg:text-xl">
                 {" "}
                 Top
-              </p>
+              </p> */}
               <Player
               className="rotate-180 "
                 autoplay
                 loop
-                src="https://assets9.lottiefiles.com/packages/lf20_ddfvanih.json"
-                style={{ height: "70px", width: "70x", }}
+                src="https://lottie.host/2866deba-d513-45b2-a6a0-3729f718032a/nzTdfk4TCw.json"
+                style={{ height: "70px", width: "70x",transform: "rotate(0deg)" }}
               >
                 <Controls
                   visible={false}

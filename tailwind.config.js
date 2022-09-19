@@ -9,7 +9,7 @@ module.exports = {
       'Neue-bold': ['aktiv-grotesk', 'helvetica']  
     },
     colors: {
-      'black': '#17171c',
+      'black': '#121111',
       'white': '#fff',
       "green": "#e7fa90",
       "orange": "#fa9f90"
@@ -25,7 +25,7 @@ module.exports = {
     
    fontSize: {
      "5xl" : "2.5rem",
-     "10xl" : "12rem"
+     "10xl" : "7rem"
    }
      
     },

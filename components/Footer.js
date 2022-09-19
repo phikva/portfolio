@@ -25,6 +25,9 @@ const itemHeading = {
 export default function Footer() {
     return (
     <>
+  
+    
+  
     <motion.div
             initial="hidden"
             whileInView={{
@@ -38,7 +41,8 @@ export default function Footer() {
             }}
             variants={itemHeading}
           >
-    <footer className="grid xs:grid-cols-1 md:grid-cols-3 mt-40 ">
+       <span className="block w-full h-px bg-white col-span-3 mt-40 mb-10"></span>     
+    <footer className="grid xs:grid-cols-1 md:grid-cols-3">
     
       <div className="xs:col-start-1 col-start-2">
         <h4 className="opacity-70">say hello</h4>
@@ -54,6 +58,7 @@ export default function Footer() {
       </div>
   
     </footer>
+    
     </motion.div>
     </>
     );

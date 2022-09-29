@@ -187,7 +187,7 @@ openGraph: {
             </motion.div>
           </Link>
           <div className="grid gap-2 xs:grid-cols-1 md:grid-cols-2 mt-10">
-            <h4 className="opacity-70 text-right md:text-2xl md:text-left xl:pl-96 ">
+            <h4 className="opacity-70 text-right md:text-2xl md:text-left xl:pl-44 ">
               Project information
             </h4>
             <div className="grid items-end"> {project.year}</div>
@@ -195,7 +195,7 @@ openGraph: {
             <h3 className="font-regular  mb-20 xs:col-start-1 md:col-start-2 lg:text-6xl">
               {project.description}
             </h3>
-            <h4 className="opacity-70 text-right md:text-2xl md:text-left xl:pl-96  ">
+            <h4 className="opacity-70 text-right md:text-2xl md:text-left xl:pl-44 ">
               Deliveries{" "}
             </h4>
             

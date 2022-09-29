@@ -112,11 +112,13 @@ export default function Home({ projects, clients, educations }) {
   return (
     <>
       <span ref={myRef3}></span>
-      <motion.div variants={container}>
-        <div className="grid mt-5 hero">
+      <motion.div variants={container} 
+      className="m-0 p-0"
+      >
+        <div className="grid m-0 p-0 mt-5 hero">
          
             <motion.div
-              className="grid xs:grid-cols-1"
+              className="grid m-0 p-0 xs:grid-cols-1"
               initial="hidden"
               whileInView={{
                 opacity: 1,
@@ -129,12 +131,12 @@ export default function Home({ projects, clients, educations }) {
               }}
               variants={item}
             >
-              <h1 className="">
+              <h1 className="m-0 p-0">
             
-                 <span className="flex">
+                 <span className="flex m-0 p-0">
                  Front-end developer 
                 </span> 
-                <span>
+                <span className="m-0 p-0">
                 UI designer.
                 </span>
                  
@@ -144,13 +146,13 @@ export default function Home({ projects, clients, educations }) {
              
             </motion.div>
             <motion.div
-              className="grid xs:grid-cols-1 md:text-right"
-              initial="hidden"
+              className="grid xs:grid-cols-1 xs:text-left md:text-right"
+              initial="show"
               whileInView={{
                 opacity: 1,
                 y: 0,
                 transition: {
-                  delay: 0.4,
+                  delay: 0.5,
                   ease: [0.6, 0.01, -0.05, 0.95],
                   duration: 1,
                 },
@@ -161,9 +163,9 @@ export default function Home({ projects, clients, educations }) {
          </motion.div>
          
          
-        <div className="m-5 md:m-10 xl:m-10 flex justify-start items-center h-24 absolute bottom-0 left-0 right-0">
-        <span className="absolute left-0 top-0 w-full h-px bg-white"></span>
-         <a onClick={executeScroll} className="">
+        <div className="flex xs:justify-center md:justify-start items-center md:items-start mb-12">
+        <span className="relative left-0 right-0 bottom-0 w-full h-px bg-white"></span>
+         <a onClick={executeScroll} className="absolute bottom-0 md:right-7">
         
               <Player
               autoplay
@@ -178,15 +180,11 @@ export default function Home({ projects, clients, educations }) {
               ></Player>
           
           </a>
-          <div className="absolute right-0">
-            <h3 className=" text-lg">
-              Open for work
-            </h3>
-          </div>
+         
          </div>
          
         </div>
-        <h4 ref={myRef} className="mb-2 md:w-8/12 md:relative left-1/3">
+        <h4 ref={myRef} className="mb-2 mt-24 md:w-8/12 md:relative left-1/3">
           selected work
         </h4>
       
@@ -234,7 +232,7 @@ export default function Home({ projects, clients, educations }) {
                 </div>
 
                 <div className="mt-2 lg:mt-6 ">
-                  <h4 className="xl:text-5xl ">
+                  <h4 className="xl:text-4xl ">
                     <Link href={`/project/${slug}`}>
                       <a>{title}</a>
                     </Link>

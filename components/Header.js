@@ -9,7 +9,7 @@ export default function Header() {
         
           <nav>
           <ul className="text-right sm:grid grid-cols-2">
-            <li className="xs:text-xl xl:text-2xl rounded-full border-2 xs:py-1 xs:px-2 transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 hover:bg-green hover:text-black duration-300">
+            <li className="xs:text-xl xl:text-2xl">
               <Link href="/">Philip Kvam</Link>
             </li>
             {/* <li>

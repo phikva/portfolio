@@ -118,7 +118,7 @@ export default function Home({ projects, clients, educations }) {
         <div className="grid m-0 p-0 mt-5 hero">
          
             <motion.div
-              className="grid m-0 p-0 xs:grid-cols-1"
+              className=""
               initial="hidden"
               whileInView={{
                 opacity: 1,
@@ -131,7 +131,7 @@ export default function Home({ projects, clients, educations }) {
               }}
               variants={item}
             >
-              <h1 className="m-0 p-0">
+              <h1 className=" md:-ml-3 p-0">
             
                  <span className="flex m-0 p-0">
                  Front-end developer 
